@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок</title>
+</head>
+<body>
+    <header>
+            <img alt="logo"; src="images/logo.png"; width="100px">
+        </header>
+    <main>
+        
+        <section>
+        <h2>Зворотній зв'язок</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Персональна інформація</legend>
+
+                <div>
+                    <label for="fullname">Прізвище та ім'я:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="age">Вік:</label>
+                    <input type="number" id="age" name="age" min="1" max="120">
+                </div>
+
+                <div>
+                    <p>Ваша освіта:</p>
+                    <label>
+                        <input type="radio" name="education" value="complete"> Повна
+                    </label>
+                    <label>
+                        <input type="radio" name="education" value="incomplete"> Неповна
+                    </label>
+                    <label>
+                        <input type="radio" name="education" value="university"> Вища
+                    </label>
+                    <label>
+                        <input type="radio" name="education" value="professional"> Професійна
+                    </label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="goal">Мета зворотнього зв'язку:</label>
+                <select id="goal" name="goal">
+                    <option value="cooperation">Співпраця</option>
+                    <option value="copyright">Скарга на порушення права власності</option>
+                    <option value="proposal">Пропозиція</option>
+                    <option value="bug">Наявність помилки</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="details">Детально:</label><br>
+                <textarea id="details" name="details" rows="5" cols="40" maxlength="500" placeholder="Максимум 500 символів"></textarea>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="agreement" required> Я погоджуюся на обробку персональних даних
+                </label>
+            </div>
+
+            <div>
+                <button type="submit">Відправити</button>
+            </div>
+        </form>
+    </section>
+    </main>
+
+    <div>
+        <a href="main.html">Повернутися на головну</a>
+    </div>
+    
+    <footer>
+        <p><b>Адреса:</b> м. Київ, вул. Спортивна, 10</p>
+        <p><b>Контактна інформація:</b> +380 44 123 45 67, info@gym-scream.com</p>
+        <p><u>© 2026 Gym Scream. Всі права захищені.</u></p>
+    </footer>
+
+</body>
+</html>

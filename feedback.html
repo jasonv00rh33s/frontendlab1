@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">  
     <title>Зворотній зв'язок</title>
+    <style>
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: darkgreen;
+            box-shadow: 0 0 5px rgba(0, 100, 0, 0.4);
+        }
+
+        button[type="submit"] {
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <header>
-            <img alt="logo"; src="images/logo.png"; width="100px">
+        <header>
+            <div>
+                <h1>Інтернет-магазин Gym Scream</h1>
+                <img alt="logo"; src="images/logo.png"; width="100px">
+            </div>
         </header>
     <main>
         
@@ -50,7 +67,7 @@
                 </div>
             </fieldset>
 
-            <div>
+            <div class="goal-box">
                 <label for="goal">Мета зворотнього зв'язку:</label>
                 <select id="goal" name="goal">
                     <option value="cooperation">Співпраця</option>
@@ -60,25 +77,25 @@
                 </select>
             </div>
 
-            <div>
-                <label for="details">Детально:</label><br>
+            <div class="details-box">
+                <label for="details">Детально:</label>
                 <textarea id="details" name="details" rows="5" cols="40" maxlength="500" placeholder="Максимум 500 символів"></textarea>
             </div>
 
             <div>
-                <label>
+                <label class="agree-box">
                     <input type="checkbox" name="agreement" required> Я погоджуюся на обробку персональних даних
                 </label>
             </div>
 
-            <div>
+            <div class="submit-box">
                 <button type="submit">Відправити</button>
             </div>
         </form>
     </section>
     </main>
 
-    <div>
+    <div class="back-to-main">
         <a href="main.html">Повернутися на головну</a>
     </div>
     

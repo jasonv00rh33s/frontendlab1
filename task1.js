@@ -150,10 +150,10 @@ console.log("Товар із мінімальною ціною 2:", minProduct.n
 // інфо то додаємо в кінець списку товарів; якщо вся інфо наявна, то на 
 // початок списку товарів. 
 function addProduct(item) {
-  if (item.vendorCode || !item.id || !item.name || !item.country || !item.oldPrice1 || !item.oldPrice2 || !item.currentPrice || !item.quantity) {
-    products.unshift(item);
-  } else {
+  if (!item.vendorCode || !item.id || !item.name || !item.country || !item.oldPrice1 || !item.oldPrice2 || !item.currentPrice || !item.quantity) {
     products.push(item);
+  } else {
+    products.unshift(item);
   }
 }
 

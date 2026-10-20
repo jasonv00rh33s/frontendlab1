@@ -60,8 +60,12 @@ for (let i = 0; i < users.length; i++){
 }
 let ageAvg = totalAge / users.length;
 
+for (let i = 0; i < users.length; i++) {
+  if (users[i].age === ageAvg) {
+    console.log(`Користувач з віком ${ageAvg} (${users[i].lastName}): освіта - ${users[i].education}`);
+  }
+}
 
-console.log("Середній вік користувача: ", ageAvg )
 
 // 3. Поділити користувачів за часом звернення та метою на три класи – 
 // «звернулись з претензією у робочий час» (з 09:00 до 18:00), «звернулись 
@@ -76,7 +80,7 @@ let others = [];
 for (let i = 0; i < users.length; i++){
     if (users[i].getTime() >= 9 && users[i].getTime() < 18 && users[i].feedback_goal === "претензія"){
         usersWithComplaint.push(users[i]);
-    } else if (users[i].getTime() >= 9 && users[i].getTime() <= 18 && users[i].feedback_goal === "побажання"){
+    } else if (users[i].getTime() >= 9 && users[i].getTime() < 18 && users[i].feedback_goal === "побажання"){
         usersWithAWish.push(users[i]);
     } else {
         others.push(users[i]);

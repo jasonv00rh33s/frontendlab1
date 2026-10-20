@@ -208,7 +208,7 @@ tfoot td {
 
 .product-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
@@ -300,7 +300,7 @@ fieldset label {
 .details-box {
     flex-grow: 2;
     flex-shrink: 1;
-    flex-basis: 350px;
+    flex-basis: 500px;
 }
 
 .agree-box {

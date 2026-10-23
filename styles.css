@@ -39,8 +39,8 @@ ul, ol {
 }
 
 #partners {
-    float:left;
-    width: 500px;
+    width: 100;
+    max-width: 500px;
 }
 
 a {
@@ -63,6 +63,8 @@ a[href^="http"] {
 
 img[src*="images/"] {
     max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 header {
@@ -209,7 +211,7 @@ tfoot td {
 
 .product-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
@@ -432,4 +434,50 @@ nav.nav-vertical a {
 
 .home.nav-right {
     padding-right: 170px;  
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .home, .catalog {
+        padding-top: 0;
+    }
+
+    .home header,
+    .catalog header {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header > div:first-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+        padding: 10px;
+        text-align: center;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+
+    body {
+        padding: 10px;
+    }
 }

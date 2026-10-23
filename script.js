@@ -9,7 +9,7 @@ function initFallingImages() {
         img.src = images[Math.floor(Math.random() * images.length)];
         img.className = "falling-img";
         img.style.left = Math.random() * (header.clientWidth - 40) + "px";
-        img.addEventListener("animationend", () => img.remove());
+        img.addEventListener("animationend", () => header.removeChild(img));
         header.appendChild(img);
     }, 1200);
 }
@@ -90,4 +90,14 @@ function initNavLayout() {
     mq.addEventListener("change", apply);
 }
 
-initNavLayout();
+// initNavLayout();
+
+
+
+
+const logo = document.querySelector('header img');
+if (logo) {
+    logo.onclick = function () {
+        console.log("клік по логотипу");
+    };
+}

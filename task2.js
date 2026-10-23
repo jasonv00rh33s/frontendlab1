@@ -1,7 +1,7 @@
 class User {
     constructor(lastName, firstName, age, education, feedback_goal, date_of_appeal, time_of_appeal){
         this.lastName = lastName;
-    this.firstName = firstName;
+        this.firstName = firstName;
         this.age = age;
         this.education = education;
         this.feedback_goal = feedback_goal;
@@ -59,6 +59,8 @@ for (let i = 0; i < users.length; i++){
     totalAge += users[i].age
 }
 let ageAvg = totalAge / users.length;
+
+console.log("Середній вік користувачів:", ageAvg);
 
 for (let i = 0; i < users.length; i++) {
   if (users[i].age === ageAvg) {

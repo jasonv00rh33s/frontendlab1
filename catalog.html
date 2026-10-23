@@ -15,6 +15,12 @@
     </header>
     <section>
     <h2>Каталог товарів</h2>
+    
+    <div class="search-box">
+    <label for="search">Пошук товару:</label>
+    <input type="search" id="search" placeholder="Введіть назву...">
+    </div>
+    <p id="no-results" hidden>Нічого не знайдено</p>
 
     <div class="product-cards">
 
@@ -48,7 +54,7 @@
             </ul>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-new>
             <h3>Килимок для йоги</h3>
             <img src="images/mat.avif" alt="Килимок для йоги" width="200">
             <p><strong>Країна походження:</strong> Німеччина</p>
@@ -62,6 +68,7 @@
                 <li>Властивість: антиковзке покриття</li>
             </ul>
         </article>
+    </div>
     </section>
     <div class="back-to-main">
         <a href="main.html">Повернутися на головну</a>
@@ -72,6 +79,6 @@
         <p><b>Контактна інформація:</b> +380 44 123 45 67, info@gym-scream.com</p>
         <p><u>© 2026 Gym Scream. Всі права захищені.</u></p>
     </footer>
-    <script src="task1.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

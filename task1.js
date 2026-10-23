@@ -102,7 +102,7 @@ const products = [
 ];
 
 console.log("Початковий список товарів:");
-console.table(products);
+console.table([...products]);
 
 // 1. впорядкування товарів за країною походження 
 products.sort(function(a, b) {
@@ -151,7 +151,7 @@ console.log("Товар із мінімальною ціною 2:", minProduct.n
 // початок списку товарів. 
 function addProduct(item) {
   if (!item.vendorCode || !item.id || !item.name || !item.country || !item.oldPrice1 || !item.oldPrice2 || !item.currentPrice || !item.quantity) {
-    products.push(item);
+    products.push(item)
   } else {
     products.unshift(item);
   }

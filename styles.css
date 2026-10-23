@@ -100,6 +100,7 @@ header > div:first-child {
 
 .home header {
     position: absolute;
+    overflow: hidden;
 }
 
 .catalog header {
@@ -319,6 +320,7 @@ label[for] {
 input[type="text"],
 input[type="email"],
 input[type="number"],
+input[type="search"]
 select,
 textarea {
     width: 100%;
@@ -345,4 +347,89 @@ button {
 button:hover {
     background-color: #2e7d32;
     transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+header > div:first-child,
+.auth-links {
+    position: relative;
+    z-index: 1;              
+}
+
+header .falling-img {
+    position: absolute;
+    top: -40px;
+    height: 32px;
+    width: auto;
+    z-index: 0;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(160px); }
+}
+
+.new-badge {
+    color: red;
+    font-size: 1.2em;  
+    font-style: normal;
+    margin-left: 10px;
+}
+
+
+.details-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.details-wrap textarea {
+    flex: 1;
+    min-width: 0;
+}
+
+.tooltip {
+    display: none;
+    flex: 0 0 200px;
+    padding: 8px 10px;
+    background: #333;
+    color: white;
+    font-size: 0.85em;
+    border-radius: 4px;
+}
+
+.details-wrap.active textarea {
+    background-color: #eaf6ea;
+    border: 2px solid darkgreen;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.details-wrap.active .tooltip {
+    display: block;
+}
+
+
+nav.nav-vertical {
+    position: fixed;
+    top: 120px;
+    right: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+nav.nav-vertical a {
+    margin-right: 0;
+}
+
+.home.nav-right {
+    padding-right: 170px;  
 }
